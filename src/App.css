@@ -1,0 +1,269 @@
+/* App.css - Centered Design with Border Box Containers */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f7e7c1;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+/* Center the entire app */
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Main container with border */
+.app {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #dde1e7;
+  background: rgba(255, 255, 255, 0.349);
+}
+
+header {
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 2px solid #0275d8;
+  padding-bottom: 15px;
+}
+
+h1 {
+  color: #0275d8;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #5a5a5a;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* Add User Form Styles with Border Box */
+.add-user-form {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 1px solid #dee2e6;
+}
+
+.add-user-form h2 {
+  border-bottom: 2px solid #28a745;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+}
+
+.form-group input.error {
+  border-color: #dc3545;
+}
+
+.error-text {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+
+.add-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.add-btn:hover {
+  background-color: #218838;
+}
+
+.add-btn:disabled {
+  background-color: #8cb996;
+  cursor: not-allowed;
+}
+
+/* User List Container with Border Box */
+.user-list {
+  margin-top: 30px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-list h2 {
+  border-bottom: 2px solid #0275d8;
+  margin-bottom: 20px;
+}
+
+.user-list ul {
+  list-style: none;
+}
+
+.user-list li {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e9ecef;
+}
+
+.user-info {
+  flex: 1;
+}
+
+h3 {
+  color: #0275d8;
+  margin-bottom: 5px;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  min-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.delete-btn:disabled {
+  background-color: #e07a84;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #dc3545;
+  padding: 15px;
+  background-color: #f8d7da;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px solid #f5c6cb;
+}
+
+/* Spinner Styles */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #0275d8;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.btn-spinner {
+  width: 16px;
+  height: 16px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* No users message */
+.no-users {
+  text-align: center;
+  padding: 20px;
+  color: #6c757d;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .app {
+    padding: 15px;
+    margin: 10px;
+  }
+  
+  .user-list li {
+    flex-direction: column;
+  }
+  
+  .user-info {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .delete-btn {
+    width: 100%;
+  }
+}
